@@ -1,0 +1,1 @@
+/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/publish/web.config

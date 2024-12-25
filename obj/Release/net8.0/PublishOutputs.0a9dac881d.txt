@@ -1,0 +1,4 @@
+/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/publish/publish/web.config
+/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/publish/publish/wwwroot/sample-data/weather.json
+/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/publish/publish/wwwroot/_framework/blazor.boot.json
+/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/publish/web.config

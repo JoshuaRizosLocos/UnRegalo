@@ -1,0 +1,179 @@
+﻿@page "/"
+
+@inject IJSRuntime JSRuntime
+
+<div class="fondo-gatitos">
+    <PageTitle>Para Ti Morenita Hermosa</PageTitle>
+
+    <!-- Contenedor principal centrado -->
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;">
+        
+        <!-- Título principal -->
+        <h1 style="color: #e70475; 
+                font-family: 'Great Vibes', cursive; 
+                margin-bottom: 20px; 
+                font-size: 5rem; 
+                font-weight: bold; 
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+            @tituloPrincipal
+        </h1>
+
+        <!-- GIFs agrupados -->
+        <div style="margin-bottom: 30px; display: flex; justify-content: center; gap: 20px;">
+            <!-- Primer GIF -->
+            <img src="@gif1" alt="GIF 1" style="max-width: 15%; height: auto;" /> 
+
+            <!-- Segundo GIF -->
+            <img src="@gif2" alt="GIF 2" style="max-width: 15%; height: auto;" /> 
+
+            <!-- Tercer GIF -->
+            <img src="@gif3" alt="GIF 3" style="max-width: 15%; height: auto;" />
+        </div>
+
+        <!-- Título de la pregunta -->
+        <h2 style="color: #e70475; 
+                font-family: 'Great Vibes', cursive; 
+                margin-bottom: 20px; 
+                font-size: 3.5rem; 
+                font-weight: bold; 
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);">
+            @tituloPregunta
+        </h2>
+
+        <!-- Botones de respuesta -->
+        <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 40px;">
+            @if (estado == "1A")
+            {
+                <button @onclick="MostrarRespuestaPositiva" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonPositivo
+                </button>
+
+                <button @onclick="MostrarRespuestaNegativa" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonNegativo
+                </button>
+            }
+            else if (estado == "2A")
+            {
+                <button @onclick="MostrarPromesa" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonPositivo
+                </button>
+
+                <button @onclick="MostrarPromesaFinal" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonNegativo
+                </button>
+            }
+            else if (estado == "2B")
+            {
+                <button @onclick="MostrarPromesa" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonPositivo
+                </button>
+
+                <button @onclick="MostrarPromesa" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonNegativo
+                </button>
+            }
+            else if (estado == "3A")
+            {
+                <!-- No hay botones en 3A -->
+                <button disabled style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: not-allowed;">
+                    @botonPositivo
+                </button>
+
+                <!-- Botón vacío o inactivo -->
+                <button disabled style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: not-allowed;">
+                    @botonNegativo
+                </button>
+            }
+            else if (estado == "3B")
+            {
+                <button @onclick="MostrarPromesa" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonPositivo
+                </button>
+
+                <button @onclick="MostrarPromesa" style="font-size: 18px; padding: 10px 20px; background-color: #ff69b4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    @botonNegativo
+                </button>
+            }
+        </div>
+    </div>
+
+    <!-- Animación -->
+    <div @ref="animacionDiv" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+        <img src="FiUUPum.gif" alt="Animación" style="max-width: 200px; height: auto;" />
+    </div>
+</div>
+
+@code {
+    private string tituloPrincipal = "Hola mi morenita, hice esto para ti ❤️";
+    private string tituloPregunta = "Mi navidad es magica y hermosa porque tu eres parte de mi vida. ¿Está siendo especial tu navidad?";
+    private string botonPositivo = "Siii 🥰"; //te va llevar a mostrar 2A
+    private string botonNegativo = "noooooouuuu 🥹"; //te va llevar a mostrar 2B
+    private string gif1 = "FiUUPum.gif";
+    private string gif2 = "RegaloRosa.gif";
+    private string gif3 = "FiUUPum.gif";
+    private string estado = "1A"; // Estado inicial de la interacción
+    private ElementReference animacionDiv; // Referencia al div de la animación
+
+    // Método para activar la animación
+    private async Task ActivarAnimacion()
+    {
+        // Mostrar la animación
+        await JSRuntime.InvokeVoidAsync("showElement", animacionDiv);
+
+        // Esperar 3 segundos y ocultar la animación
+        await Task.Delay(3000);
+        await JSRuntime.InvokeVoidAsync("hideElement", animacionDiv);
+    }
+
+    // Método para manejar la respuesta positiva
+    private void MostrarRespuestaPositiva()
+    {
+        estado = "2A";
+        tituloPrincipal = "Es así como quiero que pases todas las navidades, esta y todas son especiales contigo";
+        tituloPregunta = "¿Te gustaron todos tus obsequios?";
+        botonPositivo = "Siiipi, todos son bonitos como yo ☺️";//te va llevar a mostrar 3A
+        botonNegativo = "NoooO, quiero más regalos 😭";//te va llevar a mostrar 3B
+        gif1 = "Arbolito1.gif";
+        gif2 = "EmojiBesito.gif";
+        gif3 = "Arbolito1.gif";
+    }
+
+    // Método para manejar la respuesta negativa
+    private void MostrarRespuestaNegativa()
+    {
+        estado = "2B";
+        tituloPrincipal = "Solo ve lo magico que es este dia, hay angeles por doquier, mirate en un espejo";
+        tituloPregunta = "Te hare una promesa, quieres escucharla?";
+        botonPositivo = "si porfavor";//te va llevar a mostrar 3A
+        botonNegativo = "no pero si";//te va llevar a mostrar 3A
+        gif1 = "angelitos.gif";
+        gif2 = "confetti.gif";
+        gif3 = "angelitos.gif";
+    }
+
+    // Método para manejar la respuesta después de los botones 3A
+    private void MostrarPromesa()
+    {
+        estado = "3A";
+        tituloPrincipal = "Tu eres mi regalo hoy y todos los dias, mi regalo para ti hoy y siempre es el amor que te tengo";
+        tituloPregunta = "Por eso como ultimo obsequio de 2024 te doy mi promesa de que siempre seras mi Linda Preciosa y Amada Morenita";
+        botonPositivo = "Te amo ❤️";
+        botonNegativo = "Te amo ❤️";
+        gif1 = "confetti2.gif";
+        gif2 = "navidadConejo.gif";
+        gif3 = "confetti2.gif";
+    }
+
+    // Método para manejar la respuesta después de los botones 3B
+    private void MostrarPromesaFinal()
+    {
+        estado = "3B";
+        tituloPrincipal = "Tranquila Morenita, te mereces esto y mucho mas";
+        tituloPregunta = "Por hoy y este año te dare una ultima promesa como obsequio";
+        botonPositivo = "quiero oirla";//te va llevar a mostrar 3A
+        botonNegativo = "ya quiero oirlo ya";//te va llevar a mostrar 3A
+        gif1 = "ConejitoLuces.gif";
+        gif2 = "GalletaRana.gif";
+        gif3 = "ConejitoLuces.gif";
+    }
+}

@@ -1,0 +1,101 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/obj/Debug/net8.0/compressed/k2pc7usb1m.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/Arbolito1.gif",
+      "PackagePath": "staticwebassets/Arbolito1.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/ConejitoLuces.gif",
+      "PackagePath": "staticwebassets/ConejitoLuces.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/EmojiBesito.gif",
+      "PackagePath": "staticwebassets/EmojiBesito.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/EmojiCorazon.png",
+      "PackagePath": "staticwebassets/EmojiCorazon.png"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/FiUUPum.gif",
+      "PackagePath": "staticwebassets/FiUUPum.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/FondoGatitosNavidad.jpg",
+      "PackagePath": "staticwebassets/FondoGatitosNavidad.jpg"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/GalletaRana.gif",
+      "PackagePath": "staticwebassets/GalletaRana.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/RegaloRosa.gif",
+      "PackagePath": "staticwebassets/RegaloRosa.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/angelitos.gif",
+      "PackagePath": "staticwebassets/angelitos.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/animacion.js",
+      "PackagePath": "staticwebassets/animacion.js"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/confetti.gif",
+      "PackagePath": "staticwebassets/confetti.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/confetti2.gif",
+      "PackagePath": "staticwebassets/confetti2.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/navidadConejo.gif",
+      "PackagePath": "staticwebassets/navidadConejo.gif"
+    },
+    {
+      "Id": "/Users/MAC/CodeForVisualStudio/BlazorProjects/Para_Mi_Morenita_Hermosa/ParaTiMorenitaHermosa/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.ParaTiMorenitaHermosa.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.ParaTiMorenitaHermosa.props",
+      "PackagePath": "build\\ParaTiMorenitaHermosa.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.ParaTiMorenitaHermosa.props",
+      "PackagePath": "buildMultiTargeting\\ParaTiMorenitaHermosa.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.ParaTiMorenitaHermosa.props",
+      "PackagePath": "buildTransitive\\ParaTiMorenitaHermosa.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
